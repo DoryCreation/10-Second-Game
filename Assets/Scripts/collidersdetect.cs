@@ -19,4 +19,15 @@ public class collidersdetect : MonoBehaviour
     //detect when colliders are activated
     //check if activated colliders are in a row/column
     //if so, delete the objects that are in that row/colum and attached to it
+
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.name == "item3")
+        {
+            print("Event Triggered");
+            EventManager.ScoreFunction();
+        }
+   
+    }
 }
