@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-
-    public delegate void ScoreAction();
-
-    public static event ScoreAction ScoreEvent;
-
-    public static void ScoreFunction()
+    public delegate void ScoreAddAction();
+    public static event ScoreAddAction ScoreAddEvent;
+    public static void ScoreAddFunction()
     {
-
         print("event triggered!");
-
-        if (ScoreEvent != null)
+        if (ScoreAddEvent != null)
         {
-            ScoreEvent(); //triggers the event
+            ScoreAddEvent(); //triggers the event
         }
     }
-
+    public delegate void ScoreRemoveAction();
+    public static event ScoreRemoveAction ScoreRemoveEvent;
+    public static void ScoreRemoveFunction()
+    {
+        print("event triggered!");
+        if (ScoreRemoveEvent != null)
+        {
+            ScoreRemoveEvent(); //triggers the event
+        }
+    }
 }
+

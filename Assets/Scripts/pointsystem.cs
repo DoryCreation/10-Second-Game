@@ -2,47 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
 public class pointsystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-
-    private int score;
-    public TMP_Text scoreCountText;
-
+    public TMP_Text scoreText;
+    public int score;
     void Start()
     {
         score = 0;
+        scoreText.text = "Score: " + score;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        scoreText.text = "Score: " + score;
     }
-
-    //assign point values to different sized objects
-    //when an item is placed and colliders activated, add that items points to total
-    //when an item is destroyed, remove points from total
-    //display point total at the top of the screen
-
-    void countScore()
+    void AddPoint()
     {
         score = score + 1;
-        scoreCountText.text = "score " + score; 
     }
-
-
-
-    void OnEnabled()
+    void RemovePoint()
     {
-        EventManager.ScoreEvent += countScore;
+        score = score - 1;
     }
-
+    void OnEnable()
+    {
+        EventManager.ScoreRemoveEvent += RemovePoint;
+        EventManager.ScoreAddEvent += AddPoint;
+    }
     void OnDisable()
     {
-        EventManager.ScoreEvent -= countScore;
+        EventManager.ScoreRemoveEvent += RemovePoint;
+        EventManager.ScoreAddEvent -= AddPoint;
     }
-
 }

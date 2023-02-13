@@ -4,30 +4,12 @@ using UnityEngine;
 
 public class collidersdetect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter(Collider col)
     {
-       
+        EventManager.ScoreAddFunction();
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider col)
     {
-        
-    }
-
-    //detect when colliders are activated
-    //check if activated colliders are in a row/column
-    //if so, delete the objects that are in that row/colum and attached to it
-
-
-    void OnCollisionEnter(Collision col)
-    {
-        if(col.gameObject.name == "item3")
-        {
-            print("Event Triggered");
-            EventManager.ScoreFunction();
-        }
-   
+        EventManager.ScoreRemoveFunction();
     }
 }
