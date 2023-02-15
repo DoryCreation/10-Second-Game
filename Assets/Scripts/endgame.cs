@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class endgame : MonoBehaviour
 {
@@ -18,9 +19,7 @@ public class endgame : MonoBehaviour
 
     void EndScreen()
     {
-        Vector3 pos = transform.position;
-        pos.y = 0f;
-        transform.position = pos;
+        SceneManager.LoadScene(1);
     }
 
     //when timer runs out, execute endgame

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -18,7 +19,6 @@ public class Timer : MonoBehaviour
     {
         //starts timer on level start
         timerIsRunning = true;
-
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out");
                 timeRemaining = 0;
                 timerIsRunning = false;
-                EndGame();
+                SceneManager.LoadScene(1);
                 /*
                  * stops timer once count reaches 0
                  * also sets timer to 0 for the text

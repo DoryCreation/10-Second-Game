@@ -5,7 +5,7 @@ using TMPro;
 public class pointsystem : MonoBehaviour
 {
     public TMP_Text scoreText;
-    public int score;
+    public static int score;
     void Start()
     {
         score = 0;
