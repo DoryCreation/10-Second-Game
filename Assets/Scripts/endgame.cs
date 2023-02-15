@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class endgame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        
+        Timer.EndGame += EndScreen;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void OnDisable()
     {
-        
+        Timer.EndGame -= EndScreen;
     }
 
-    public void MoveEndScreen()
-    {
 
+    void EndScreen()
+    {
+        Vector3 pos = transform.position;
+        pos.y = 0f;
+        transform.position = pos;
     }
 
     //when timer runs out, execute endgame

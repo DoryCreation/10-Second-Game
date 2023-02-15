@@ -10,6 +10,9 @@ public class Timer : MonoBehaviour
     public bool timerIsRunning = false;
     public TMP_Text timeText;
 
+    public delegate void GameEnded();
+    public static event GameEnded EndGame;
+
     // Update is called once per frame
     void start()
     {
@@ -39,6 +42,7 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                EndGame();
                 /*
                  * stops timer once count reaches 0
                  * also sets timer to 0 for the text
