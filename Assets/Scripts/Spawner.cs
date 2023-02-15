@@ -28,22 +28,18 @@ public class Spawner : MonoBehaviour
             if (randomItem == 0)
             {
                 Instantiate(object1);
-                Instantiate(object2);
             }
             if (randomItem == 1)
             {
                 Instantiate(object2);
-                Instantiate(object3);
             }
             if (randomItem == 2)
             {
                 Instantiate(object3);
-                Instantiate(object4);
             }
             if (randomItem == 3)
             {
                 Instantiate(object4);
-                Instantiate(object1);
             }
         }
 
