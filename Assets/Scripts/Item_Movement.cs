@@ -7,7 +7,6 @@ public class Item_Movement : MonoBehaviour
     private Vector3 mOffset;
     //collects the z axis position of the game object
     private float mZCoord;
-    //[SerializeField] private AudioSource leafRussle;
  
     void OnMouseDown()
     {
@@ -29,7 +28,6 @@ public class Item_Movement : MonoBehaviour
 
     void OnMouseDrag()
     {
-        //leafRussle.Play();
         //move the object to the position created above
         transform.position = GetMouseWorldPos() + mOffset;
     }
