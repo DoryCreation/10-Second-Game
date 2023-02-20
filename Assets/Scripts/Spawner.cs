@@ -8,19 +8,20 @@ public class Spawner : MonoBehaviour
     public GameObject object2;
     public GameObject object3;
     public GameObject object4;
+    private bool spawnerOn = false;
     void Start()
     {
         Instantiate(object1);
         Instantiate(object2);
         Instantiate(object3);
         Instantiate(object4);
-
+        spawnerOn = true;
         StartCoroutine(SelectAndSpawnGameObject());
     }
 
     IEnumerator SelectAndSpawnGameObject()
     {
-        while (true)
+        while (spawnerOn == true)
         {
             yield return new WaitForSeconds(2f);
             int randomItem = Random.Range(0,4);
@@ -43,5 +44,19 @@ public class Spawner : MonoBehaviour
             }
         }
 
+    }
+
+    void DisableSpawn()
+    {
+        spawnerOn = false;
+    }
+
+    void OnEnable()
+    {
+        EventManager.FinishEvent += DisableSpawn;
+    }
+    void OnDisable()
+    {
+        EventManager.FinishEvent -= DisableSpawn;
     }
 }

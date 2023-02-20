@@ -24,5 +24,16 @@ public class EventManager : MonoBehaviour
             ScoreRemoveEvent(); //triggers the event
         }
     }
+
+    public delegate void FinishAction();
+    public static event FinishAction FinishEvent;
+    public static void FinishFunction()
+    {
+        print("event triggered!");
+        if (FinishEvent != null)
+        {
+            FinishEvent(); //triggers the event
+        }
+    }
 }
 
