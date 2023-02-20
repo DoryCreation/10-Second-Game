@@ -35,7 +35,7 @@ public class pointsystem : MonoBehaviour
     }
     void OnDisable()
     {
-        EventManager.ScoreRemoveEvent += RemovePoint;
+        EventManager.ScoreRemoveEvent -= RemovePoint;
         EventManager.ScoreAddEvent -= AddPoint;
     }
 
