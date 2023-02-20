@@ -35,5 +35,27 @@ public class EventManager : MonoBehaviour
             FinishEvent(); //triggers the event
         }
     }
+
+
+
+    public delegate void RowOneScoreAction();
+    public static event RowOneScoreAction RowOneScoreEvent;
+    public static void RowOneScoreFunction()
+    {
+        if (RowOneScoreEvent != null)
+        {
+            RowOneScoreEvent();
+        }
+    }
+
+    public delegate void RowOneDeletionAction();
+    public static event RowOneDeletionAction RowOneDeletionEvent;
+    public static void RowOneDeletionFunction()
+    {
+        if (RowOneDeletionEvent != null)
+        {
+            RowOneDeletionEvent();
+        }
+    }
 }
 

@@ -14,9 +14,13 @@ GameObject:
   - component: {fileID: 1910788112712793276}
   - component: {fileID: 1910788112712762176}
   - component: {fileID: 1910788112712762183}
+  - component: {fileID: -823556472572478656}
+  - component: {fileID: 6989012567005934066}
+  - component: {fileID: -8789021861619340229}
+  - component: {fileID: -8253170980992344624}
   m_Layer: 0
   m_Name: item1
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cf923ead31dc84ab297de092e3f7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPos: {x: 0, y: 0, z: 0}
+  trolleyScore: 0
 --- !u!54 &1910788112712762183
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +133,59 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-823556472572478656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910788112712793277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3451149dcff3c6c4b95307e47e0ec224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowOne: 0
+  columnOne: 0
+--- !u!114 &6989012567005934066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910788112712793277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b3f0864fbcc9e44abade682cd6eccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowOne: 0
+  columnTwo: 0
+--- !u!114 &-8789021861619340229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910788112712793277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0756058b663684bad2ff798865be31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowOne: 0
+  columnThree: 0
+--- !u!114 &-8253170980992344624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910788112712793277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538f2d42927f829459ec81accdd61e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowOne: 0
+  columnFour: 0
