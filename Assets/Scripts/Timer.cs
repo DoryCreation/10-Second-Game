@@ -42,6 +42,7 @@ public class Timer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 endScreen.SetActive(true);
+                EventManager.FinishFunction();
                 /*
                  * stops timer once count reaches 0
                  * also sets timer to 0 for the text

@@ -21,10 +21,12 @@ public class pointsystem : MonoBehaviour
     void AddPoint()
     {
         score = score + 1;
+        print("Added a point");
     }
     void RemovePoint()
     {
         score = score - 1;
+        print("Removed a point");
     }
     void OnEnable()
     {
@@ -36,4 +38,5 @@ public class pointsystem : MonoBehaviour
         EventManager.ScoreRemoveEvent += RemovePoint;
         EventManager.ScoreAddEvent -= AddPoint;
     }
+
 }
