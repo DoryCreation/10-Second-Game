@@ -11,6 +11,6 @@ public class DisplayFinalScore : MonoBehaviour
     void Start()
     {
         //access score from pointsystem  script and display it
-        scoreText.text = "Score: " + pointsystem.score;
+        scoreText.text = pointsystem.score + " POINTS!";
     }
 }
