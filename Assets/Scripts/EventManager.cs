@@ -57,5 +57,25 @@ public class EventManager : MonoBehaviour
             RowOneDeletionEvent();
         }
     }
+
+    public delegate void RowTwoScoreAction();
+    public static event RowTwoScoreAction RowTwoScoreEvent;
+    public static void RowTwoScoreFunction()
+    {
+        if (RowTwoScoreEvent != null)
+        {
+            RowTwoScoreEvent();
+        }
+    }
+
+    public delegate void RowTwoDeletionAction();
+    public static event RowTwoDeletionAction RowTwoDeletionEvent;
+    public static void RowTwoDeletionFunction()
+    {
+        if (RowTwoDeletionEvent != null)
+        {
+            RowTwoDeletionEvent();
+        }
+    }
 }
 

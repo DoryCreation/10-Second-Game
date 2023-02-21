@@ -18,6 +18,10 @@ GameObject:
   - component: {fileID: 3466240346893468147}
   - component: {fileID: 7721979198198550060}
   - component: {fileID: -6009153562775079422}
+  - component: {fileID: -5755768662950215985}
+  - component: {fileID: 7901933952173063424}
+  - component: {fileID: 3627153698912220906}
+  - component: {fileID: -2513783651752143635}
   m_Layer: 0
   m_Name: item2
   m_TagString: Food
@@ -188,4 +192,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rowOne: 0
+  columnFour: 0
+--- !u!114 &-5755768662950215985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748338625500589646}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a34ec8d8ceb3c4ab34ef23d791b236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowTwo: 0
+  columnOne: 0
+--- !u!114 &7901933952173063424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748338625500589646}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd251061d60cb143bb4e9a1971b9bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowTwo: 0
+  columnTwo: 0
+--- !u!114 &3627153698912220906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748338625500589646}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee43a81b1f77d8f4bb3862c0f91fbb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowTwo: 0
+  columnThree: 0
+--- !u!114 &-2513783651752143635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748338625500589646}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085c1934d0bb0364b9c799c5d8bba253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowTwo: 0
   columnFour: 0
