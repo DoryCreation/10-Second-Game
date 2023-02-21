@@ -42,7 +42,8 @@ public class GridOneOne : MonoBehaviour
     {
         if(rowOne > 0)
         {
-            Destroy(gameObject);
+            gameObject.transform.position = new Vector3(10f, 10f, 0f);
+             Destroy(gameObject);
         }
     }
 }

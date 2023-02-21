@@ -5,16 +5,19 @@ using UnityEngine;
 public class ItemDeletion : MonoBehaviour
 {
     public int rowOne;
+    public int rowTwo;
 
 
     void OnEnable()
     {
         EventManager.RowOneScoreEvent += RowOneDetection;
+        EventManager.RowTwoScoreEvent += RowTwoDetection;
     }
 
     void OnDisable()
     {
         EventManager.RowOneScoreEvent -= RowOneDetection;
+        EventManager.RowTwoScoreEvent -= RowTwoDetection;
     }
 
     void RowOneDetection()
@@ -27,5 +30,17 @@ public class ItemDeletion : MonoBehaviour
             rowOne = 0;
         }
         
+    }
+
+    void RowTwoDetection()
+    {
+        rowTwo++;
+        if (rowTwo > 3)
+        {
+            Debug.Log("deleting");
+            EventManager.RowTwoDeletionFunction();
+            rowTwo = 0;
+        }
+
     }
 }
